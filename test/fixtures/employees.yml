@@ -1,0 +1,34 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: "John Doe"
+  email: "john.doe@example.com"
+  country: "US"
+  currency: "USD"
+  job_title: "software_engineer"
+  department: "engineering"
+  employment_type: "full_time"
+  salary: 100000
+  hire_date: "2020-01-01"
+
+two:
+  full_name: "Jane Smith"
+  email: "jane.smith@example.com"
+  country: "GB"
+  currency: "GBP"
+  job_title: "senior_engineer"
+  department: "engineering"
+  employment_type: "full_time"
+  salary: 150000
+  hire_date: "2018-05-15"
+
+three:
+  full_name: "Alice Johnson"
+  email: "alice.johnson@example.com"
+  country: "CA"
+  currency: "CAD"
+  job_title: "designer"
+  department: "design"
+  employment_type: "contract"
+  salary: 80000
+  hire_date: "2023-03-20"
