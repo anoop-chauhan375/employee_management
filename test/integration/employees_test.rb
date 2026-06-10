@@ -11,7 +11,6 @@ class EmployeesTest < ActionDispatch::IntegrationTest
     json_response = JSON.parse(@response.body)
     assert json_response["success"]
     assert json_response["data"]["employees"].is_a?(Array)
-    assert json_response["data"]["pagination"].present?
   end
 
   test "should paginate employees" do

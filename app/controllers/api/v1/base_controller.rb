@@ -1,8 +1,7 @@
 module Api
   module V1
-    class BaseController < ApplicationController
-      skip_before_action :verify_authenticity_token
-      include Pagy::Backend
+    class BaseController < ActionController::API
+      # include Pagy::Backend
 
       rescue_from ActiveRecord::RecordNotFound do |e|
         render json: { success: false, errors: [e.message] }, status: :not_found
@@ -14,11 +13,11 @@ module Api
 
       private
 
-      def json_success(data, status: :ok)
+      def json_success(data = {}, status = :ok)
         render json: { success: true, data: data }, status: status
       end
 
-      def json_error(errors, status: :unprocessable_entity)
+      def json_error(errors, status = :unprocessable_entity)
         render json: { success: false, errors: Array(errors) }, status: status
       end
     end

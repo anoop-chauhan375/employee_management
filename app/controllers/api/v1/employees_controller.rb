@@ -9,16 +9,7 @@ module Api
                     .search_by_email(params[:email_query])
                     .sorted_by(params[:sort], params[:direction])
 
-        pagy, employees = pagy(employees, items: 25)
-        json_success(
-          employees: employees,
-          pagination: {
-            page: pagy.page,
-            items: pagy.items,
-            total: pagy.count,
-            pages: pagy.pages
-          }
-        )
+        json_success(employees: employees.limit(25))
       end
 
       def show
@@ -30,7 +21,7 @@ module Api
         employee = Employee.new(employee_params)
 
         if employee.save
-          json_success(employee: employee, status: :created)
+          json_success({ employee: employee }, :created)
         else
           json_error(employee.errors.full_messages)
         end

@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :employees
+
+      namespace :insights do
+        get :country_salary_stats
+        get :job_title_salary_stats
+        get :dashboard
+      end
     end
   end
 end
