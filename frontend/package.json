@@ -1,0 +1,39 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "/usr/share/cursor/resources/app/resources/helpers/node ./node_modules/.bin/vite",
+    "build": "/usr/share/cursor/resources/app/resources/helpers/node ./node_modules/.bin/vite build",
+    "preview": "/usr/share/cursor/resources/app/resources/helpers/node ./node_modules/.bin/vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hookform/resolvers": "^5.4.0",
+    "@rolldown/binding-linux-x64-gnu": "^1.1.0",
+    "axios": "^1.17.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.78.0",
+    "react-is": "^19.2.7",
+    "react-router-dom": "^7.17.0",
+    "recharts": "^3.8.1",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.6.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.2",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.3.1",
+    "vite": "^8.0.16"
+  }
+}
