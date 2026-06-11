@@ -44,7 +44,7 @@ const SalaryInsights = () => {
   const formatCurrency = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(val);
 
   return (
-    <MainLayout title="Salary Insights">
+    <>
       <div className="space-y-8">
         {/* Section A: Country Stats */}
         <section className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
@@ -165,7 +165,7 @@ const SalaryInsights = () => {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

@@ -27,7 +27,7 @@ const Dashboard = () => {
 
   if (loading) {
     return (
-      <MainLayout title="Dashboard">
+      <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 animate-pulse">
           {[1, 2, 3, 4].map((i) => (
             <div key={i} className="h-32 bg-gray-200 rounded-xl border border-gray-200" />
@@ -38,11 +38,11 @@ const Dashboard = () => {
             <div key={i} className="h-96 bg-gray-200 rounded-xl border border-gray-200" />
           ))}
         </div>
-      </MainLayout>
+      </div>
     );
   }
 
-  if (!data) return <MainLayout title="Dashboard">No data available</MainLayout>;
+  if (!data) return <div>No data available</div>;
 
   const formatCurrency = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(val || 0);
 
@@ -63,7 +63,7 @@ const Dashboard = () => {
   }));
 
   return (
-    <MainLayout title="Dashboard Overview">
+    <>
       {/* KPI Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <MetricCard title="Total Employees" value={data.global_stats?.total_employees || 0} icon={Users} color="indigo" />
@@ -170,7 +170,7 @@ const Dashboard = () => {
           </ResponsiveContainer>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

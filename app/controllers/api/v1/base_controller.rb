@@ -1,7 +1,9 @@
 module Api
   module V1
     class BaseController < ActionController::API
-      # include Pagy::Backend
+      include DeviseTokenAuth::Concerns::SetUserByToken
+      
+      before_action :authenticate_api_v1_hr_manager!
 
       rescue_from ActiveRecord::RecordNotFound do |e|
         render json: { success: false, errors: [e.message] }, status: :not_found

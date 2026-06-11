@@ -62,7 +62,7 @@ const EmployeesList = () => {
   const formatCurrency = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(val);
 
   return (
-    <MainLayout title="Employees">
+    <>
       <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
         {/* Controls */}
         <div className="p-4 lg:p-6 border-b border-gray-200 flex flex-col lg:flex-row lg:items-center justify-between space-y-4 lg:space-y-0 lg:space-x-4">
@@ -195,7 +195,7 @@ const EmployeesList = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 
