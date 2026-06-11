@@ -74,7 +74,7 @@ const EmployeeForm = () => {
   };
 
   return (
-    <MainLayout title={isEdit ? 'Edit Employee' : 'Create New Employee'}>
+    <>
       <div className="mb-6">
         <button
           onClick={() => navigate(-1)}
@@ -233,7 +233,7 @@ const EmployeeForm = () => {
           </button>
         </div>
       </form>
-    </MainLayout>
+    </>
   );
 };
 

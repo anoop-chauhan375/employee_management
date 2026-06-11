@@ -38,14 +38,14 @@ const EmployeeDetails = () => {
     }
   };
 
-  if (loading) return <MainLayout title="Employee Details"><div className="animate-pulse h-96 bg-gray-100 rounded-xl" /></MainLayout>;
-  if (!employee) return <MainLayout title="Employee Details">Employee not found</MainLayout>;
+  if (loading) return <div className="animate-pulse h-96 bg-gray-100 rounded-xl" />;
+  if (!employee) return <div>Employee not found</div>;
 
   const formatCurrency = (val) => new Intl.NumberFormat('en-US', { style: 'currency', currency: employee.currency }).format(val);
   const formatDate = (date) => new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
   return (
-    <MainLayout title={employee.full_name}>
+    <>
       <div className="mb-6 flex items-center justify-between">
         <button
           onClick={() => navigate(-1)}
@@ -159,7 +159,7 @@ const EmployeeDetails = () => {
           </div>
         </div>
       </div>
-    </MainLayout>
+    </>
   );
 };
 

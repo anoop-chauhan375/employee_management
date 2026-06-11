@@ -1,5 +1,11 @@
 import api from './client';
 
+export const authService = {
+  signIn: (email, password) => api.post('/auth/sign_in', { email, password }),
+  signOut: () => api.delete('/auth/sign_out'),
+  getMe: () => api.get('/auth/me'),
+};
+
 export const employeeService = {
   getAll: (params) => api.get('/employees', { params }),
   getById: (id) => api.get(`/employees/${id}`),
